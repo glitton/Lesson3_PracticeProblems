@@ -30,8 +30,39 @@ let famousWords = "seven years ago...";
 let beginningFamousWords = "Four score and ";
 // let final = `${beginningFamousWords}${famousWords}`;
 let final = beginningFamousWords.concat(famousWords);
-console.log(final);
+// console.log(final);
 
-let numbers = [1, 2, 3, 4, 5];
-numbers.splice(1, 1);
-console.log(numbers);
+// let numbers = [1, 2, 3, 4, 5];
+// numbers.splice(1, 1);
+// console.log(numbers);
+
+// let flintstones = ["Fred", "Wilma"];
+// let flinstones2 = ["Barney", "Betty"];
+// let flinstones3 = ["Bambam", "Pebbles"];
+
+// // const flinstonesFamily = flintstones.concat(flinstones2, flinstones3);
+
+// const flinstonesFamily = [...flintstones, ...flinstones2, ...flinstones3];
+// console.log(flinstonesFamily);
+
+let flintstones = ["Fred", "Wilma"];
+flintstones.push(["Barney", "Betty"]);
+flintstones.push(["Bambam", "Pebbles"]);
+
+// flintstones = [].concat(...flintstones); //concat
+flintstones = flintstones.reduce((accum, element) => {
+  return accum.concat(element);
+}, []);
+
+// console.log(flintstones);
+
+let flinstonesFamily = [];
+flintstones.forEach((element) => {
+  //why does this not need a return??
+  flinstonesFamily = flinstonesFamily.concat(element);
+});
+
+// console.log(flinstonesFamily);
+
+let newFlintstones = flintstones.flat();
+console.log(newFlintstones);
