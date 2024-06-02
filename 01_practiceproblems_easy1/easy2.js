@@ -45,24 +45,47 @@ let final = beginningFamousWords.concat(famousWords);
 // const flinstonesFamily = [...flintstones, ...flinstones2, ...flinstones3];
 // console.log(flinstonesFamily);
 
-let flintstones = ["Fred", "Wilma"];
-flintstones.push(["Barney", "Betty"]);
-flintstones.push(["Bambam", "Pebbles"]);
+// let flintstones = ["Fred", "Wilma"];
+// flintstones.push(["Barney", "Betty"]);
+// flintstones.push(["Bambam", "Pebbles"]);
 
-// flintstones = [].concat(...flintstones); //concat
-flintstones = flintstones.reduce((accum, element) => {
-  return accum.concat(element);
-}, []);
+// // flintstones = [].concat(...flintstones); //concat
+// flintstones = flintstones.reduce((accum, element) => {
+//   return accum.concat(element);
+// }, []);
 
-// console.log(flintstones);
+// // console.log(flintstones);
 
-let flinstonesFamily = [];
-flintstones.forEach((element) => {
-  //why does this not need a return??
-  flinstonesFamily = flinstonesFamily.concat(element);
-});
+// let flinstonesFamily = [];
+// flintstones.forEach((element) => {
+//   //why does this not need a return??
+//   flinstonesFamily = flinstonesFamily.concat(element);
+// });
 
-// console.log(flinstonesFamily);
+// // console.log(flinstonesFamily);
 
-let newFlintstones = flintstones.flat();
-console.log(newFlintstones);
+// let newFlintstones = flintstones.flat();
+// console.log(newFlintstones);
+
+let flintstones = {
+  Fred: 0,
+  Wilma: 1,
+  Barney: 2,
+  Betty: 3,
+  Bambam: 4,
+  Pebbles: 5,
+};
+
+const flintstonesArray = Object.entries(flintstones);
+// console.log(flintstonesArray);
+
+const barneyEntry = flintstonesArray
+  .filter((pair) => pair[0] === "Barney")
+  .shift();
+// console.log(barneyEntry);
+
+let numbers = [1, 2, 3, 4];
+let table = { field1: 1, field2: 2, field3: 3, field4: 4 };
+
+console.log(Array.isArray(numbers));
+console.log(Array.isArray(table));
