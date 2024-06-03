@@ -87,5 +87,21 @@ const barneyEntry = flintstonesArray
 let numbers = [1, 2, 3, 4];
 let table = { field1: 1, field2: 2, field3: 3, field4: 4 };
 
-console.log(Array.isArray(numbers));
-console.log(Array.isArray(table));
+// console.log(Array.isArray(numbers));
+// console.log(Array.isArray(table));
+
+let title = "Flintstone Family Members";
+// console.log(title.length);
+
+let padding = Math.floor((40 - title.length) / 2);
+const centeredTitle = title.padStart(padding + title.length, "*");
+
+// console.log(centeredTitle);
+
+let statement1 = "The Flintstones Rock!";
+let statement2 = "Easy come, easy go.";
+
+let count1 = statement1.split("").filter((char) => char === "t").length;
+let count2 = statement2.split("").filter((char) => char === "s").length;
+
+console.log(count2);
