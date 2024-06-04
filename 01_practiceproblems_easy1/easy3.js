@@ -48,3 +48,21 @@ console.log(isColorValid("blue"));
 // };
 
 // console.log(generateArr(3, 8));
+
+// Question 6: REVIEW THIS
+let arr = [1, 2, 3]; //object
+let newArr = arr; //object
+
+const num = arr[0];
+let newNum = num;
+
+function double(num) {
+  return num * 2; //primitive number
+}
+
+double(newNum);
+
+//variables are 1) arr on line 53, 2) newArr on line 54, 3) num on line 56,
+// 4) newNum on line57, 5) double on 59 and 6) num on 60
+//primitive values are 1,2,3 (3 elements of the array), line 56 num and 0 of num[0] (4,5)
+// newNum is another primitive, assigned to num (6),
