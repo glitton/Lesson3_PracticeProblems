@@ -38,3 +38,13 @@ arr2[0].first = 42;
 // }
 const isColorValid = (color) => ["blue", "green"].includes(color);
 console.log(isColorValid("blue"));
+
+// const generateArr = (startNumber, endNumber) => {
+//   let finalArray = [];
+//   for (let i = startNumber; i <= endNumber; i++) {
+//     finalArray.push(i);
+//   }
+//   return finalArray;
+// };
+
+// console.log(generateArr(3, 8));
