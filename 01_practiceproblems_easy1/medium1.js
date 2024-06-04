@@ -128,4 +128,31 @@ function messWithIt(someNumber) {
 
 let newAnswer = messWithIt(answer); // 42 + 8  = 50
 
-console.log(answer - 8); //34!  answer is still 42
+// console.log(answer - 8); //34!  answer is still 42
+
+// Question 8: Object gets mutated
+//Question 9:
+
+function rps(fist1, fist2) {
+  if (fist1 === "rock") {
+    return fist2 === "paper" ? "paper" : "rock";
+  } else if (fist1 === "paper") {
+    return fist2 === "scissors" ? "scissors" : "paper";
+  } else {
+    return fist2 === "rock" ? "rock" : "scissors";
+  }
+}
+
+// console.log(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"));
+// returns paper
+
+// Question 10
+function foo(param = "no") {
+  return "yes";
+}
+
+function bar(param = "no") {
+  return param === "no" ? "yes" : "no";
+}
+
+bar(foo()); // no
