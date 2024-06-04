@@ -31,13 +31,13 @@ function repeatString(str, num) {
 // Question 2
 function changeCase(str) {
   let newText = "";
-  const wordsArray = str.split("");
-  console.log(wordsArray);
-  wordsArray.map((word) => {
-    if (word === word.toUpperCase()) {
-      newText += word.toLowerCase();
+  const lettersArray = str.split("");
+  // console.log(lettersArray);
+  lettersArray.map((letter) => {
+    if (letter === letter.toUpperCase()) {
+      newText += letter.toLowerCase();
     } else {
-      newText += word.toUpperCase();
+      newText += letter.toUpperCase();
     }
   });
   return newText;
