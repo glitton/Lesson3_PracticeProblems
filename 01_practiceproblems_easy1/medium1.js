@@ -44,7 +44,7 @@ function changeCase(str) {
 }
 
 let munstersDescription = "The Munsters are creepy and spooky.";
-console.log(changeCase(munstersDescription));
+// console.log(changeCase(munstersDescription));
 
 // Launch School solution
 // console.log(
@@ -59,3 +59,73 @@ console.log(changeCase(munstersDescription));
 //     })
 //     .join("")
 // );
+
+// Question 3:  Find a factor by dividing the number by each counting number starting with 1
+// There should be no remainder
+// function factors(number) {
+//   let divisor = number;
+//   let factors = [];
+//   do {
+//     if (number % divisor === 0) {
+//       factors.push(number / divisor);
+//     }
+//     divisor -= 1;
+//   } while (divisor !== 0);
+//   return factors;
+// }
+
+function factors(number) {
+  let divisor = number;
+  let factors = [];
+  while (divisor > 0) {
+    if (number % divisor === 0) {
+      factors.push(number / divisor);
+    }
+    divisor -= 1;
+  }
+  return factors;
+}
+
+// console.log(factors(9));
+
+// Question 4
+function addToRollingBuffer1(buffer, maxBufferSize, newElement) {
+  buffer.push(newElement);
+  if (buffer.length > maxBufferSize) {
+    buffer.shift();
+  }
+  return buffer;
+}
+
+function addToRollingBuffer2(buffer, maxBufferSize, newElement) {
+  buffer = buffer.concat(newElement);
+  if (buffer.length > maxBufferSize) {
+    buffer.shift();
+  }
+  return buffer;
+}
+
+// push() function makes the changes in the original array but concat() creates a brand new array.
+// It creates the new array and populates it with the elements from the other arrays.
+// Due to this mechanism, the concat() function is slower than the push() function.
+
+// Question 5
+// console.log(0.3 + 0.6);
+// console.log(0.3 + 0.6 === 0.9);
+
+// Question 6
+let nanArray = [NaN];
+
+// console.log(nanArray[0] === NaN);
+// console.log(isNaN(nanArray));
+
+//Question 7
+let answer = 42;
+
+function messWithIt(someNumber) {
+  return (someNumber += 8);
+}
+
+let newAnswer = messWithIt(answer); // 42 + 8  = 50
+
+console.log(answer - 8); //34!  answer is still 42
