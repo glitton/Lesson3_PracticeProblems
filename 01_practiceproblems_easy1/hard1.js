@@ -95,6 +95,6 @@ const halloweenCollection = {
 
 let myBoo = boo(halloweenCollection["greet"]);
 
-//Variables: scare, myBoo, halloweenCollection, let myBoo => 4
-//Primitive values: strings: "scare.toUpperCase + !!!", "Happy Halloween", "Boo", "May all ..." => 4
-//Objects: {greet: ...}, halloweenCollection["greet"]
+//Variables: function boo, scare parameter, myBoo, halloweenCollection, let myBoo => 5
+//Primitive values: strings: "scare.toUpperCase + !!!", object "greet": "Happy Halloween", "Boo", "May all ..." => 6
+//Objects: {greet: ...}, halloweenCollection["greet"] => 2
