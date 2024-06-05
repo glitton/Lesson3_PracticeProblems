@@ -128,7 +128,6 @@ function isDotSeparatedIpAddress(inputString) {
       return false;
     }
   }
-
   return true;
 }
 
