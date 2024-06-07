@@ -10,19 +10,19 @@ function modifyArray(arr) {
 }
 
 modifyArray(numbers); //function is invoked and now modifies the numbers array
-console.log(numbers); // this outputs the numbers array with the value 4 added at the end
+// console.log(numbers); // this outputs the numbers array with the value 4 added at the end
 
 // Examine the following code snippet. What will be logged to the console, and why?
 // Highlight the use of logical operators and conditional execution in JavaScript. -- Mohamed
 
-let status = "online";
-let mode = status === "offline" || "online";
+// let status = "online";
+// let mode = status === "offline" || "online";
 
-if (mode === "online") {
-  console.log("System is online");
-} else {
-  console.log("System is offline");
-}
+// if (mode === "online") {
+//   console.log("System is online");
+// } else {
+//   console.log("System is offline");
+// }
 
 // What will be logged to the console and why? -- Will
 
@@ -35,6 +35,27 @@ const shallowCopy = { ...original };
 shallowCopy.a = 10;
 shallowCopy.b.c = 20;
 
-console.log(original.a, original.b.c); // primitive doesn't change,
+// console.log(original.a, original.b.c); // primitive doesn't change,
 //changes the key value pair of the object only
-console.log(shallowCopy.a, shallowCopy.b.c);
+// console.log(shallowCopy.a, shallowCopy.b.c);
+
+let greeting = "Hello";
+
+while (true) {
+  greeting = "Hi";
+  break;
+}
+
+// console.log(greeting);
+
+function replace(str, value) {
+  while (true) {
+    break;
+  }
+
+  str = value;
+}
+
+let greet = "Hey!";
+replace(greet, "Hello");
+console.log(greet);
