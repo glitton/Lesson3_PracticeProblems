@@ -35,9 +35,11 @@ const shallowCopy = { ...original };
 shallowCopy.a = 10;
 shallowCopy.b.c = 20;
 
-// console.log(original.a, original.b.c); // primitive doesn't change,
-//changes the key value pair of the object only
-// console.log(shallowCopy.a, shallowCopy.b.c);
+/*
+console.log(original.a, original.b.c); // primitive doesn't change,
+changes the key value pair of the object only
+console.log(shallowCopy.a, shallowCopy.b.c); 
+*/
 
 let greeting = "Hello";
 
