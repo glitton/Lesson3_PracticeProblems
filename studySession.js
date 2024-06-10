@@ -62,4 +62,91 @@ let greet = "Hey!";
 replace(greet, "Hello");
 // console.log(greet);
 
-console.log(23 + true);
+// console.log(23 + true);
+
+// let myArray = [1, 3, 6, 11, 4, 2, 4, 9, 17, 16, 0];
+
+// let newArray = myArray.sort();
+// console.log(newArray);
+
+// newArray.forEach((element) => {
+//   if (element % 2 === 0) {
+//     // console.log(element);
+//   }
+// });
+
+let myArray = [1, 3, 6, 11, 4, 2, 4, 9, 17, 16, 0];
+
+function oddsEvens(arr) {
+  let finalArray = [];
+  arr.map((num) => {
+    if (num % 2 === 0) {
+      finalArray.push("even");
+    } else {
+      finalArray.push("odd");
+    }
+  });
+  return finalArray;
+}
+
+// console.log(oddsEvens(myArray));
+
+function oddsAndEvens(arr) {
+  let finalArray = arr.map(function (value) {
+    if (value % 2 === 0) {
+      return "even";
+    } else {
+      return "odd";
+    }
+  });
+  return finalArray;
+}
+
+// console.log(oddsAndEvens(myArray));
+
+let newArray = myArray.map(function (value) {
+  if (value % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+});
+
+// console.log(newArray);
+
+// function findIntegers(array) {
+//   return array.filter((item) => Number.isInteger(item));
+// }
+
+// let things = [1, "a", "1", 3, NaN, 3.1415, -4, null, false];
+// let integers = findIntegers(things);
+// console.log(integers); // => [1, 3, -4]
+
+// function oddLengths(array) {
+//   // let newArray = array.map((item) => item.length);
+//   // return newArray.filter((item) => item % 2 !== 0);
+//   return array.map((item) => item.length).filter((item) => item % 2 !== 0);
+// }
+// let arr = ["a", "abcd", "abcde", "abc", "ab"];
+// console.log(oddLengths(arr)); // => [1, 5, 3]
+
+// let array = [3, 5, 7];
+
+// function sumOfSquares(arr) {
+//   return arr.reduce((acc, number) => acc + number * number, 0);
+// }
+// console.log(sumOfSquares(array)); // => 83
+
+function oddLengthsArray(strings) {
+  return strings.reduce((filteredArrayLength, letters) => {
+    let length = letters.length;
+    if (length % 2 !== 0) {
+      filteredArrayLength.push(length);
+    }
+
+    return filteredArrayLength;
+  }, []);
+}
+
+let arr = ["a", "abcd", "abcde", "abc", "ab"];
+console.log(oddLengthsArray(arr));
