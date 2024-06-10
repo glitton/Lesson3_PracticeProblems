@@ -60,4 +60,6 @@ function replace(str, value) {
 
 let greet = "Hey!";
 replace(greet, "Hello");
-console.log(greet);
+// console.log(greet);
+
+console.log(23 + true);
